@@ -89,6 +89,18 @@ main {
   right: 5%;
   bottom: 50%;
   display: none;
+  pointer-events: none;
+}
+
+.error-p {
+  color: var(--clr-primary-Red);
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.7rem;
+  display: none;
 }
 
 .form-section {
@@ -154,9 +166,7 @@ main {
     input:focus + label {
       opacity: 1;
     }
-    input:valid + label {
-      opacity: 0;
-    }
+
     input.invalid {
       box-shadow: 0 0 1px 2px var(--clr-primary-Red);
       color: var(--clr-primary-Red);
@@ -165,6 +175,9 @@ main {
     input.invalid + label {
       color: var(--clr-primary-Red);
       opacity: 1;
+    }
+    input:valid + label {
+      opacity: 0;
     }
     label {
       position: absolute;

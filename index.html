@@ -29,7 +29,7 @@
 
       <div class="form-section">
         <div class="free-trial">Try it free 7 days then $20/mo. thereafter</div>
-        <form novalidate onsubmit="return TryClaim()" action="">
+        <form id="register" novalidate action="">
           <div class="input-div">
             <img
               id="err-icon"
@@ -37,10 +37,11 @@
               src="/images/icon-error.svg"
               alt=""
             />
-            <input type="text" id="first-name" required />
+            <input name="firtsname" type="text" id="first-name" required />
             <label for="first-name"
               ><span class="label-text">First Name</span></label
             >
+            <p id="error-p" class="error-p">First Name cannot be empty</p>
           </div>
           <div class="input-div">
             <img
@@ -49,10 +50,11 @@
               src="/images/icon-error.svg"
               alt=""
             />
-            <input id="last-name" type="text" required />
+            <input name="lastname" id="last-name" type="text" required />
             <label for="last-name"
               ><span class="label-text">Last Name</span></label
             >
+            <p id="error-p" class="error-p">Last Name cannot be empty</p>
           </div>
           <div class="input-div">
             <img
@@ -65,6 +67,7 @@
             <label for="email"
               ><span class="label-text">Email Address</span></label
             >
+            <p id="error-p" class="error-p">Looks like this is not an email</p>
           </div>
           <div class="input-div">
             <img
@@ -75,6 +78,7 @@
             />
             <input type="password" id="pass" required />
             <label for="pass"><span class="label-text">Password</span></label>
+            <p id="error-p" class="error-p">Password cannot be empty</p>
           </div>
           <button class="btn" type="submit">Claim your free trial</button>
           <div class="terms-and-services">
