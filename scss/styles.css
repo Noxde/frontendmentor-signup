@@ -57,6 +57,21 @@ main {
   cursor: pointer;
   -webkit-box-shadow: 0 5px #30bb7f;
           box-shadow: 0 5px #30bb7f;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #4dd198;
+  -webkit-box-shadow: 0 5px #3ccd8e;
+          box-shadow: 0 5px #3ccd8e;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .hero-text {

@@ -47,6 +47,17 @@ main {
   padding: 1rem;
   cursor: pointer;
   box-shadow: 0 5px darken($color: hsl(154, 59%, 51%), $amount: 5);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: lighten($color: hsl(154, 59%, 51%), $amount: 5);
+  box-shadow: 0 5px lighten($color: hsl(154, 59%, 51%), $amount: 1);
+  transition: all 0.2s;
+}
+
+.btn:active {
+  transform: translateY(2px);
 }
 
 .hero-text {
