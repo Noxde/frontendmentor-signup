@@ -124,12 +124,13 @@ main {
     }
     input:invalid {
       box-shadow: none;
-      border: 2px solid var(--clr-primary-Red);
-      color: var(--clr-primary-Red);
+      //   border: 2px solid var(--clr-primary-Red);
+      //   color: var(--clr-primary-Red);
     }
-    input:invalid + label {
-      opacity: 0;
-    }
+
+    // input:invalid + label {
+    //   opacity: 0;
+    // }
     input:valid {
       color: #8c8b92;
     }
@@ -144,6 +145,15 @@ main {
     }
     input:valid + label {
       opacity: 0;
+    }
+    input.invalid {
+      box-shadow: 0 0 1px 2px var(--clr-primary-Red);
+      color: var(--clr-primary-Red);
+      border-color: var(--clr-primary-Red);
+    }
+    input.invalid + label {
+      color: var(--clr-primary-Red);
+      opacity: 1;
     }
     label {
       position: absolute;

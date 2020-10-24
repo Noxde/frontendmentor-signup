@@ -156,12 +156,6 @@ main {
 .form-section form input:invalid {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 2px solid var(--clr-primary-Red);
-  color: var(--clr-primary-Red);
-}
-
-.form-section form input:invalid + label {
-  opacity: 0;
 }
 
 .form-section form input:valid {
@@ -182,6 +176,18 @@ main {
 
 .form-section form input:valid + label {
   opacity: 0;
+}
+
+.form-section form input.invalid {
+  -webkit-box-shadow: 0 0 1px 2px var(--clr-primary-Red);
+          box-shadow: 0 0 1px 2px var(--clr-primary-Red);
+  color: var(--clr-primary-Red);
+  border-color: var(--clr-primary-Red);
+}
+
+.form-section form input.invalid + label {
+  color: var(--clr-primary-Red);
+  opacity: 1;
 }
 
 .form-section form label {

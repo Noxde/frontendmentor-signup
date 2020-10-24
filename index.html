@@ -29,31 +29,51 @@
 
       <div class="form-section">
         <div class="free-trial">Try it free 7 days then $20/mo. thereafter</div>
-        <form action="">
+        <form novalidate onsubmit="return TryClaim()" action="">
           <div class="input-div">
-            <img class="error-icon" src="/images/icon-error.svg" alt="" />
-            <input type="text" id="first-name" />
+            <img
+              id="err-icon"
+              class="error-icon"
+              src="/images/icon-error.svg"
+              alt=""
+            />
+            <input type="text" id="first-name" required />
             <label for="first-name"
               ><span class="label-text">First Name</span></label
             >
           </div>
           <div class="input-div">
-            <img class="error-icon" src="/images/icon-error.svg" alt="" />
-            <input id="last-name" type="text" />
+            <img
+              id="err-icon"
+              class="error-icon"
+              src="/images/icon-error.svg"
+              alt=""
+            />
+            <input id="last-name" type="text" required />
             <label for="last-name"
               ><span class="label-text">Last Name</span></label
             >
           </div>
           <div class="input-div">
-            <img class="error-icon" src="/images/icon-error.svg" alt="" />
-            <input id="email" type="text" />
+            <img
+              id="err-icon"
+              class="error-icon"
+              src="/images/icon-error.svg"
+              alt=""
+            />
+            <input id="email" type="text" required />
             <label for="email"
               ><span class="label-text">Email Address</span></label
             >
           </div>
           <div class="input-div">
-            <img class="error-icon" src="/images/icon-error.svg" alt="" />
-            <input type="password" id="pass" />
+            <img
+              id="err-icon"
+              class="error-icon"
+              src="/images/icon-error.svg"
+              alt=""
+            />
+            <input type="password" id="pass" required />
             <label for="pass"><span class="label-text">Password</span></label>
           </div>
           <button class="btn" type="submit">Claim your free trial</button>
@@ -74,4 +94,5 @@
       </p>
     </footer> -->
   </body>
+  <script src="js/app.js"></script>
 </html>
