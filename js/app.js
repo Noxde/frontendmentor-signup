@@ -11,6 +11,7 @@ let firstname = document.querySelector('input#first-name');
 let lastname = document.querySelector('input#last-name');
 const email = document.querySelector('input#email');
 const password = document.querySelector('input#pass');
+let errorP = document.getElementsByClassName('error-p');
 
 let firstname1 = regForm.elements.namedItem("firstname");
 
@@ -40,18 +41,24 @@ function  validateRegisterForm(e) {
         return false;
     }
 
-    return true;
+    if (errors.length == 0) {
+        regForm.submit();
+        return true;
+    }
+
 }
 
 
 
 function handle_errors(errs) {
     let str = "You have errors with the following fields: ";
+    let i = 0;
 
     errs.map((er) => {
         er.el.classList.add('invalid');
         er.el.previousElementSibling.style.display = "block";
         er.el.nextElementSibling.nextElementSibling.style.display = "block";
+       
         
  });
 

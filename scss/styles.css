@@ -103,20 +103,13 @@ main {
 .error-icon {
   position: absolute;
   right: 5%;
-  bottom: 50%;
+  bottom: 55%;
   display: none;
   pointer-events: none;
 }
 
-.error-p {
-  color: var(--clr-primary-Red);
-  position: absolute;
-  bottom: 10%;
-  right: 0;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 0.7rem;
-  display: none;
+.error-icon2 {
+  bottom: 60%;
 }
 
 .form-section {
@@ -180,6 +173,11 @@ main {
   font-size: 1rem;
 }
 
+.form-section form input#last-name,
+.form-section form input#first-name {
+  text-transform: capitalize;
+}
+
 .form-section form input:invalid {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -206,6 +204,28 @@ main {
           box-shadow: 0 0 1px 2px var(--clr-primary-Red);
   color: var(--clr-primary-Red);
   border-color: var(--clr-primary-Red);
+  margin-bottom: 2rem;
+}
+
+.form-section form input.invalid#pass {
+  margin-bottom: 3rem;
+}
+
+.form-section form input.valid {
+  -webkit-box-shadow: 0 0 1px 2px var(--clr-primary-Green);
+          box-shadow: 0 0 1px 2px var(--clr-primary-Green);
+  border-color: var(--clr-primary-Green);
+}
+
+.form-section form .error-p {
+  color: var(--clr-primary-Red);
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.7rem;
+  display: none;
 }
 
 .form-section form input.invalid + label {
@@ -229,5 +249,40 @@ main {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+@media (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+    padding: 1rem 0;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .hero-text {
+    text-align: center;
+  }
+  main .hero-text .hero-title {
+    margin: 0;
+  }
+  main .form-section {
+    width: 100%;
+  }
+  main .terms-and-services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

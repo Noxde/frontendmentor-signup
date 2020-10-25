@@ -29,7 +29,7 @@
 
       <div class="form-section">
         <div class="free-trial">Try it free 7 days then $20/mo. thereafter</div>
-        <form id="register" novalidate action="">
+        <form id="register" novalidate method="GET">
           <div class="input-div">
             <img
               id="err-icon"
@@ -41,7 +41,7 @@
             <label for="first-name"
               ><span class="label-text">First Name</span></label
             >
-            <p id="error-p" class="error-p">First Name cannot be empty</p>
+            <p class="error-p">First Name is invalid</p>
           </div>
           <div class="input-div">
             <img
@@ -54,7 +54,7 @@
             <label for="last-name"
               ><span class="label-text">Last Name</span></label
             >
-            <p id="error-p" class="error-p">Last Name cannot be empty</p>
+            <p class="error-p">Last Name is invalid</p>
           </div>
           <div class="input-div">
             <img
@@ -63,22 +63,37 @@
               src="/images/icon-error.svg"
               alt=""
             />
-            <input name="email" id="email" type="text" required />
+            <input
+              name="email"
+              autocomplete="email"
+              id="email"
+              type="text"
+              required
+            />
             <label for="email"
               ><span class="label-text">Email Address</span></label
             >
-            <p id="error-p" class="error-p">Looks like this is not an email</p>
+            <p class="error-p">Email is invalid</p>
           </div>
           <div class="input-div">
             <img
               id="err-icon"
-              class="error-icon"
+              class="error-icon error-icon2"
               src="/images/icon-error.svg"
               alt=""
             />
-            <input name="password" type="password" id="pass" required />
+            <input
+              name="password"
+              autocomplete="new-password"
+              type="password"
+              id="pass"
+              required
+            />
             <label for="pass"><span class="label-text">Password</span></label>
-            <p id="error-p" class="error-p">Password cannot be empty</p>
+            <p class="error-p">
+              Make sure the password is at least 8 characters including an
+              uppercase letter and a number
+            </p>
           </div>
           <button class="btn" type="submit">Claim your free trial</button>
           <div class="terms-and-services">
