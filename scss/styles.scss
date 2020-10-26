@@ -211,24 +211,32 @@ main {
 @media (max-width: 1000px) {
   body {
     overflow-x: hidden;
-    padding: 1rem 0;
+    overflow-y: scroll;
   }
   main {
     display: flex;
     flex-direction: column;
     .hero-text {
+      display: flex;
+      flex-direction: column;
       text-align: center;
       .hero-title {
+        font-size: 1rem;
         margin: 0;
       }
     }
     .form-section {
       width: 100%;
+      height: 50%;
     }
     .terms-and-services {
       display: flex;
       flex-direction: column;
       padding: 0;
     }
+  }
+  .free-trial {
+    padding: 1rem 2rem;
+    text-align: center;
   }
 }

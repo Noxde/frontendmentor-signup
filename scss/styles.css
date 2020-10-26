@@ -254,7 +254,7 @@ main {
 @media (max-width: 1000px) {
   body {
     overflow-x: hidden;
-    padding: 1rem 0;
+    overflow-y: scroll;
   }
   main {
     display: -webkit-box;
@@ -266,13 +266,22 @@ main {
             flex-direction: column;
   }
   main .hero-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
   main .hero-text .hero-title {
+    font-size: 1rem;
     margin: 0;
   }
   main .form-section {
     width: 100%;
+    height: 50%;
   }
   main .terms-and-services {
     display: -webkit-box;
@@ -283,6 +292,10 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0;
+  }
+  .free-trial {
+    padding: 1rem 2rem;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */
