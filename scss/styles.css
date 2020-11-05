@@ -32,6 +32,7 @@ body {
   background-color: var(--clr-primary-Red);
   background-image: url(../images/bg-intro-desktop.png);
   background-size: contain;
+  background-position: center center;
 }
 
 main {
@@ -61,10 +62,13 @@ main {
   transition: all 0.2s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #4dd198;
   -webkit-box-shadow: 0 5px #3ccd8e;
           box-shadow: 0 5px #3ccd8e;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -140,6 +144,8 @@ main {
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
+  -webkit-box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .form-section form .terms-and-services {
@@ -253,8 +259,9 @@ main {
 
 @media (max-width: 1000px) {
   body {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    height: 100%;
+    background-size: 250%;
+    padding: 5rem 0 2rem 0;
   }
   main {
     display: -webkit-box;
@@ -264,6 +271,10 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
   }
   main .hero-text {
     display: -webkit-box;
@@ -274,24 +285,35 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2rem;
   }
   main .hero-text .hero-title {
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 0;
+    margin-bottom: 1rem;
+    max-width: 413px;
+  }
+  main .hero-text .hero-p {
+    max-width: 522px;
+  }
+  main form {
+    padding: 1.5rem !important;
   }
   main .form-section {
     width: 100%;
-    height: 50%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding-bottom: 2rem;
+    margin: 0;
   }
   main .terms-and-services {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0;
+    padding: 1rem 0 !important;
+    white-space: unset !important;
+    line-height: 2;
   }
   .free-trial {
     padding: 1rem 2rem;

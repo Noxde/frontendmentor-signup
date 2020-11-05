@@ -26,6 +26,7 @@ body {
   background-color: var(--clr-primary-Red);
   background-image: url(../images/bg-intro-desktop.png);
   background-size: contain;
+  background-position: center center;
 }
 
 main {
@@ -50,9 +51,11 @@ main {
   transition: all 0.2s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: lighten($color: hsl(154, 59%, 51%), $amount: 5);
   box-shadow: 0 5px lighten($color: hsl(154, 59%, 51%), $amount: 1);
+  transform: translateY(-2px);
   transition: all 0.2s;
 }
 
@@ -111,6 +114,8 @@ main {
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
+    box-shadow: 0 10px 0 0 rgba($color: #000000, $alpha: 0.2);
+
     .terms-and-services {
       font-size: 0.8rem;
       font-weight: 500;
@@ -210,29 +215,45 @@ main {
 
 @media (max-width: 1000px) {
   body {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    height: 100%;
+    background-size: 250%;
+    padding: 5rem 0 2rem 0;
   }
   main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 90%;
     .hero-text {
       display: flex;
       flex-direction: column;
       text-align: center;
+      align-items: center;
+      margin-bottom: 2rem;
       .hero-title {
-        font-size: 1rem;
+        font-size: 2rem;
         margin: 0;
+        margin-bottom: 1rem;
+        max-width: 413px;
+      }
+      .hero-p {
+        max-width: 522px;
       }
     }
+    form {
+      padding: 1.5rem !important;
+    }
+
     .form-section {
       width: 100%;
-      height: 50%;
+      height: min-content;
+      padding-bottom: 2rem;
+      margin: 0;
     }
     .terms-and-services {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
+      padding: 1rem 0 !important;
+      white-space: unset !important;
+      line-height: 2;
     }
   }
   .free-trial {
