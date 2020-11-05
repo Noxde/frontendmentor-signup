@@ -79,6 +79,7 @@ main {
 
 .hero-p {
   color: white;
+  font-weight: 500;
 }
 
 .free-trial {
@@ -88,7 +89,7 @@ main {
   border-radius: 10px;
   margin-bottom: 1.5rem;
   padding: 1rem;
-  box-shadow: 0 7px rgba($color: #000000, $alpha: 0.3);
+  box-shadow: 0 7px rgba($color: #000000, $alpha: 0.2);
 }
 
 .error-icon {
