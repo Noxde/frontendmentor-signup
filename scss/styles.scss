@@ -37,6 +37,10 @@ main {
   color: white;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 .btn {
   color: white;
   text-transform: uppercase;
@@ -67,8 +71,8 @@ main {
   margin: auto;
 }
 .hero-title {
-  font-size: 2.5rem;
-  max-width: 30rem;
+  font-size: 2.3rem;
+  max-width: 25rem;
   line-height: 1.2;
   margin-bottom: 2rem;
 }
